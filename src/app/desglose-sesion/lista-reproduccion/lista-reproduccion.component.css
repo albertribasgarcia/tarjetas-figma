@@ -1,0 +1,19 @@
+div.scrollable {
+  min-height: 150px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+div.borders-scrollable {
+  padding-left:16px;
+  min-height: 50px;
+  overflow: unset;
+  border-radius: 5px;
+}
+
+div.borders-scrollable:hover, div.marcar-seleccionado {
+  background-color:#f44336;
+  color:white !important;
+}
+
+

@@ -1,0 +1,15 @@
+<mat-card class="card-ultimo-visto">
+  <div fxLayout="column" fxLayoutGap="10px" *ngIf="trimestre">
+    <div>
+      <h2>Vuelve donde lo dejaste</h2>
+    </div>
+    <div >
+      {{trimestre.numero}}º Trimestre - Sesión {{sesion.id}}: {{sesion.nombre}}
+    </div>
+    <div fxFlexOffset="10px" fxLayoutGap="20px">
+      <button mat-raised-button color="warn" (click)="emitAccionUltimoVisto(1)"><mat-icon style="color:white!important">play_arrow</mat-icon> Reproducción ordenada</button>
+      <button mat-stroked-button color="warn" (click)="emitAccionUltimoVisto(2)"><mat-icon>shuffle</mat-icon> Aleatorio</button>
+      <button mat-stroked-button color="warn" (click)="emitAccionUltimoVisto(3)"><mat-icon>skip_next</mat-icon> Siguiente sesión</button>
+    </div>
+  </div>
+</mat-card>

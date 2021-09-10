@@ -1,0 +1,35 @@
+<mat-card fxLayout="column">
+  <mat-card-header style="border-bottom:1px solid #666666">
+    <h2>Sesiones del {{trimestre.numero}}º Trimestre</h2>
+  </mat-card-header>
+  <mat-card-content>
+    <div fxLayout="column" class="scrollable">
+      <div *ngFor="let item of trimestre.sesiones; let i = index" [ngClass]="{'marcar-seleccionado': seleccionado.id === item.id}" class="borders-scrollable">
+        <div fxLayout="row" (click)="cambiarSeleccionado(item)">
+          <div fxFlex="80" fxLayoutGap="20px" fxLayoutAlign="start center">
+            <div fxFlex="3">
+              <strong>{{i + 1}}</strong>
+            </div>
+            <div fxFlex>
+              {{item.nombre}}
+            </div>
+          </div>
+          <div fxFlex="20" fxLayoutAlign="end center">
+            <div *ngIf="item.id === seleccionado.id">
+              <button mat-icon-button><mat-icon>shuffle</mat-icon></button>
+              <button mat-icon-button><mat-icon>play_arrow</mat-icon></button>
+            </div>
+            <div *ngIf="item.id !== seleccionado.id">
+              <div *ngIf="item.visto">
+                <button mat-icon-button><mat-icon>visibility</mat-icon></button>
+              </div>
+              <div *ngIf="!item.visto">
+                <button mat-icon-button><mat-icon>visibility_off</mat-icon></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,28 @@
+<div class="dialogo-full" fxLayout="column" fxLayoutAlign="space-evenly center">
+  <h1><strong>Antes de empezar...</strong></h1>
+  <mat-dialog-content>
+    <div fxLayoutAlign="space-evenly center">
+      <div fxLayout="column" fxFlex="20" fxLayoutGap="30px" fxLayoutAlign="center center">
+        <div class="icono-antes-empezar">
+          <mat-icon class="icono-grande">volume_up</mat-icon>
+        </div>
+        <div>Aségurate de tener el <strong>volumen activado.</strong></div>
+      </div>
+      <div fxLayout="column" fxFlex="20" fxLayoutGap="30px" fxLayoutAlign="center center">
+        <div class="icono-antes-empezar">
+          <mat-icon class="icono-grande">timer</mat-icon>
+        </div>
+        <div>Los bits pasan automáticamente <strong>cada 2 segundos.</strong></div>
+      </div>
+      <div fxLayout="column" fxFlex="20" fxLayoutGap="30px" fxLayoutAlign="center center">
+        <div class="icono-antes-empezar">
+          <mat-icon class="icono-grande">pause</mat-icon>
+        </div>
+        <div>Puedes detener el pase con la <strong>barra espaciadora</strong> o <strong>haciendo click en la pantalla.</strong></div>
+      </div>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="center center">
+    <button mat-raised-button color="warn" [mat-dialog-close]="true"><mat-icon>play_arrow</mat-icon>Empezar pase</button>
+  </mat-dialog-actions>
+</div>

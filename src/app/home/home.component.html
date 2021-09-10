@@ -1,0 +1,15 @@
+<div fxLayout="column" class="contenido-home">
+  <ng-container *ngIf="ultimoVisto">
+    <ultimo-visto [sesion]="ultimaSesion!" (accionUltimoVisto)="abrirDialogoAntesDeEmpezar($event)"></ultimo-visto>
+  </ng-container>
+  <div fxFlexOffset="2" fxLayout="column">
+    <h2>Temario</h2>
+    <div fxLayoutGap="40px" fxLayout="column">
+      <div *ngFor="let curso of cursos" fxLayout="row" fxLayoutGap="30px">
+        <div *ngFor="let trimestre of curso.trimestres" fxLayout="row">
+          <info-trimestre class="clickable" [trimestre]="trimestre" (click)="abrirDialogoAntesDeEmpezar({modo:4, trimestre:trimestre})"></info-trimestre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

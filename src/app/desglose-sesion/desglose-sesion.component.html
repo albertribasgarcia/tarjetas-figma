@@ -1,0 +1,13 @@
+<div class="contenido-desglose-sesion" fxLayout="column">
+  <div fxFlex="5">
+    <button mat-icon-button (click)="atras()"><mat-icon>keyboard_backspace</mat-icon>Atrás</button>
+  </div>
+  <div fxFlex fxLayout="row">
+    <div fxFlex="20" fxLayout="column">
+      <info-trimestre *ngIf="trimestre" [trimestre]="trimestre"></info-trimestre>
+    </div>
+    <div fxFlex="80">
+      <lista-reproduccion *ngIf="trimestre && sesionSeleccionada" [trimestre]="trimestre" [seleccionado]="sesionSeleccionada"></lista-reproduccion>
+    </div>
+  </div>
+</div>

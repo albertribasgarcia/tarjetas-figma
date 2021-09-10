@@ -1,0 +1,16 @@
+<mat-card class="card-trimestre">
+  <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="space-between">
+    <div fxLayout="column">
+      <div><strong>{{trimestre.numero}}º Trimestre</strong></div>
+      <div>{{trimestre.progreso}}/{{trimestre.numSesiones}} sesiones</div>
+    </div>
+    <div fxLayoutAlign="center center">
+      <ng-container *ngIf="trimestre.progreso === trimestre.numSesiones ; else progreso">
+        <mat-icon class="icono-check">check</mat-icon>
+      </ng-container>
+      <ng-template #progreso>
+        <mat-progress-spinner [mode]="'determinate'" [value]="trimestre.progreso*100/trimestre.numSesiones" diameter="40"></mat-progress-spinner>
+      </ng-template>
+    </div>
+  </div>
+</mat-card>

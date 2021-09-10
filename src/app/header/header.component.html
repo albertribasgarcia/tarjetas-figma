@@ -1,0 +1,22 @@
+<div fxLayout="row" class="header">
+  <div fxFlex="80" fxLayoutAlign="start center">
+    <h1 style="margin:0;"><strong>Tarjetas</strong></h1>
+  </div>
+  <div fxFlex fxLayoutGap="20px" fxLayout="row" fxLayoutAlign="center center">
+    <div>
+      <button mat-fab>
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <div>
+      <button mat-fab (click)="configuracionesOnClick()">
+        <mat-icon>settings</mat-icon>
+      </button>
+    </div>
+    <div>
+      <button mat-fab>
+        <mat-icon>logout</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

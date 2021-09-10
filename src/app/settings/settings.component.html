@@ -1,0 +1,28 @@
+<div class="contenido-contenedor" fxLayout="row" fxFlexFill>
+  <div fxFlex="20" fxLayoutAlign="space-around">
+    <button mat-icon-button (click)="cerrarOnClick()"><mat-icon>keyboard_backspace</mat-icon></button>
+  </div>
+  <div fxFlex="60" fxLayoutAlign="space-between center" fxLayout="column">
+    <div fxFlex="20">
+      <h2><strong>Configuración</strong></h2>
+    </div>
+    <div fxFlex="40" fxFill fxLayoutGap="30px">
+      <mat-form-field appearance="fill" >
+        <mat-label>Idioma</mat-label>
+        <mat-select [(ngModel)]="idiomaActual">
+          <mat-option *ngFor="let idioma of idiomas" [value]="idioma.idiomaId">{{idioma.idioma}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill" >
+        <mat-label>Curso</mat-label>
+        <mat-select [(ngModel)]="cursoActual">
+          <mat-option *ngFor="let generacion of generaciones" [value]="generacion.id">{{generacion.nombre}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div fxFlex="20" fxLayout="column" fxFill fxLayoutGap="20px">
+      <button mat-raised-button color="warn" (click)="guardarCambios()">Guardar cambios</button>
+      <button mat-flat-button (click)="cerrarOnClick()"><u>Cerrar sin guardar</u></button>
+    </div>
+  </div>
+</div>

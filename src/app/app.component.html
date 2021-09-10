@@ -1,0 +1,16 @@
+<mat-drawer-container #drawer fxFlexFill>
+  <mat-drawer-content>
+    <div fxLayout="column">
+      <div fxFlex="10" id="app-header">
+        <app-header (abrirConfiguraciones)="abrirConfig()"></app-header>
+      </div>
+      <div fxFlex id="app-content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    </mat-drawer-content>
+  <mat-drawer position="end">
+    <app-settings (cerrarConfiguraciones)="cerrarConfig()"></app-settings>
+  </mat-drawer>
+</mat-drawer-container>
+
