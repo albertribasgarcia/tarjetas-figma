@@ -62,7 +62,7 @@ export class DesgloseSesionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    let id = 1;
+    /*let id = 1;
     let nombre = "";
     let visto = true;
     let fechaVisto = 1631106000;
@@ -86,10 +86,10 @@ export class DesgloseSesionComponent implements OnInit {
       trimestres.push(array);
       array = [];
     }
-    console.log(trimestres);
+    console.log(trimestres);*/
   }
 
-  vistos(j:number): number{
+  /*vistos(j:number): number{
     switch(j){
       case 1: return 50;
       case 2: return 30;
@@ -104,7 +104,7 @@ export class DesgloseSesionComponent implements OnInit {
     else{
       return this.generarTitulo(str.concat(this.titulos[r]) + " ");
     }
-  }
+  }*/
 
   atras(){
     this._router.navigateByUrl("/home");
